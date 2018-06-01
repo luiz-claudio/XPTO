@@ -1,4 +1,4 @@
-## Solução tecnica 
+## Solução técnica 
 
  
  
