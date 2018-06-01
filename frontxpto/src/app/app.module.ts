@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListaServiceService } from './lista-service.service';
 import { AgendaFormComponent } from './agenda-form/agenda-form.component';
 import { MenuComponent } from './menu/menu.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { MenuComponent } from './menu/menu.component';
     ListaComponent,
     AgendaFormComponent,
     MenuComponent,
+    LoginComponent,
 
 
   ],
