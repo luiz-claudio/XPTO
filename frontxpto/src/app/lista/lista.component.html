@@ -1,0 +1,48 @@
+
+<app-menu></app-menu>
+<div class="card">
+<div class="card-header">
+<div class="form-inline my-2 my-lg-6 offset-9">
+
+  <input class="form-control mr-sm-2" (keyup)="applyFilter($event.target.value)"  placeholder="Search" aria-label="Search">
+</div>
+</div>
+<div class="card-body">
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Nascimento</th>
+      <th scope="col">Celular</th>
+      <th scope="col">Fixo</th>
+      <th scope="col">Email</th>
+      <th scope="col">Endereço</th>
+      <th scope="col">Ação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let value of dataSource " >
+      <th scope="row">{{value.id}}</th>
+      <td>{{value.nome}}</td>
+      <td>{{value.nascimento}}</td>
+      <td>{{value.contato.telefone_celular}}</td>
+      <td>{{value.contato.telefone_residencial}}</td>
+      <td>{{value.contato.email}}</td>
+      <td>{{value.endereco.rua}} {{value.endereco.numero}}  <br>
+          {{value.endereco.cep}} {{value.endereco.bairro}}  <br>
+          {{value.endereco.cidade}} {{value.endereco.pais}} <br>
+          {{value.endereco.complemento}}
+      </td>
+
+
+      <td> <a [routerLink]="['/agenda/form/' + value.id]" class="btn btn-info" >Editar</a>
+        <button type="button" class="btn btn-danger"(click)='excluir(value.id)'>Excluir</button>
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+</div>
+</div>
