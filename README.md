@@ -1,6 +1,7 @@
 ## Solução técnica 
 
  
+ Teste para vaga de desenvolvedor PHP Pleno 
  
 
 Utilizando uma arquitetura cliente servidor, desenvolvi para o backend uma api php com o laravel 5.6. E para o frontend uma aplicação web com o angular 5. 
